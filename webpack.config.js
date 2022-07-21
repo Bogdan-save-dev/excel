@@ -41,6 +41,9 @@ module.exports = {
   },
   devtool: isDev ? 'source-map' : false,
   devServer: {
+    client: {
+      reconnect: true,
+    },
     port: 3000,
     hot: isDev,
   },
@@ -69,17 +72,7 @@ module.exports = {
     rules: [
       {
         test: /\.s[ac]ss$/i,
-        use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              hmr: isDev,
-              reloadAll: true,
-            },
-          },
-          'css-loader',
-          'sass-loader',
-        ],
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
       },
       {
         test: /\.js$/,
