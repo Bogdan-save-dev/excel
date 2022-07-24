@@ -7,11 +7,23 @@
 @import './ToolBar/ToolBar.scss';
 @import './Formula/Formula.scss';
 @import './Table/Table.scss';
+@import './Dashboard/Dashboard.scss';
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 body {
