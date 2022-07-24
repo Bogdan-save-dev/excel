@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;700&display=swap');
 @import '~normalize.css';
+@import './variables';
+@import './mixins';
 
 @import './Header/header.scss';
 @import './ToolBar/ToolBar.scss';
 @import './Formula/Formula.scss';
-@import './Table/table.scss';
+@import './Table/Table.scss';
 
 * {
   margin: 0;
@@ -20,4 +22,7 @@ body {
 .excel {
   position: relative;
   color: #888;
+  height: 100%;
+  max-width: 100%;
+  font-size: 0.8rem;
 }
