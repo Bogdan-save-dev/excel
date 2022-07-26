@@ -6,9 +6,14 @@ export class Excel {
 
   getRoot() {
     const $root = document.createElement('div')
+    $root.classList.add('excel')
+
     this.components.forEach((Component) => {
-      const component = new Component()
-      $root.insertAdjacentHTML('beforeend', component.toHtml())
+      const $el = document.createElement('div')
+      $el.classList.add(Component.className)
+      const component = new Component($el)
+      $el.innerHTML = component.toHtml()
+      $root.append($el)
     })
 
     return $root
