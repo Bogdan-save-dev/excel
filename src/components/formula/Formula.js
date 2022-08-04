@@ -18,6 +18,6 @@ export class Formula extends ExcelComponent {
   }
 
   onInput(event) {
-    console.log('input', event)
+    console.log('input', event.target.value)
   }
 }
